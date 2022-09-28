@@ -1,0 +1,6 @@
+1.   Why do mobile phones usually ignore auto play on video elements?
+    -   To preseve bandwith and battery usage
+2.  What will the CSS snippet at the end of this section do if the visitor is browsing on a device with 320 x 568 resolution?
+    -   The code inside the css will not run since the with of the device is smaller than 768px
+3.   Mention some of the advantages of having a single responsive website instead of dedicated versions like m.til.no for mobile and til.no for desktop?
+    -   When making changes to the website you wont have to change 2 diffrent files since the page runs off one page. Also if the website is responsive it will look good on any sized website. Also if you have one site it will mean that the user dont need to learn 2 diffrent webpage when they visit since it will be mostly the same site on phone and on pc.
