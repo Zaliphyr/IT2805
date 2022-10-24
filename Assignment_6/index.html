@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tax form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <form action="https://folk.ntnu.no/anderobs/webtek/receive_form.php" method="post">
+        <h3>Tax form (for superheroes)</h3>
+        <fieldset>
+            <label for="name"> Real name:</label>
+            <input type="text" name="name" id="name" required><br>
+
+            <label for="hender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required><br>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" name="birthdate" id="" max="1984-12-31" required><br>
+
+            <label for="hero">Hero name:</label>
+            <input type="text" name="hero" id="hero" required><br>
+
+            <label for="spandex">Do you wear spandex:</label>
+            <input type="checkbox" name="spandex" id="spandex"><br>
+
+            <label for="strength">Strength:</label>
+            <input type="range" name="strength" id="" min="1" max="10" value="1"><br>
+
+            <label for="speed">Speed:</label>
+            <input type="range" name="speed" id="" min="1" max="10" value="1"><br>
+
+            <label for="intelligence">Intelligence:</label>
+            <input type="range" name="intelligence" id="" min="1" max="10" value="1"><br>
+
+            <label for="income">Income:</label>
+            <input type="number" name="income" id="income"><br>
+
+            <label for="wealth">Wealth:</label>
+            <input type="number" name="wealth" id="wealth"><br>
+
+            <label for="tax">Tax:</label>
+            <input type="number" name="tax" id="tax" disabled>
+            <div class="submit-container">
+                <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script>
+var income = document.getElementById("income");
+var wealth = document.getElementById("wealth");
+var tax = document.getElementById("tax");
+
+income.addEventListener("input", updateTax);
+wealth.addEventListener("input", updateTax);
+
+function updateTax() {
+    tax.value = (income.value * 0.35) + (wealth.value * 0.25);
+}
+
+</script>
+</html>
