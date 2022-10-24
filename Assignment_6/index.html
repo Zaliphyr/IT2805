@@ -15,7 +15,7 @@
             <label for="name"> Real name:</label>
             <input type="text" name="name" id="name" required><br>
 
-            <label for="hender">Gender:</label>
+            <label for="gender">Gender:</label>
             <select name="gender" id="gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -25,7 +25,7 @@
             <input type="email" name="email" id="email" required><br>
 
             <label for="birthdate">Birthdate:</label>
-            <input type="date" name="birthdate" id="" max="1984-12-31" required><br>
+            <input type="date" name="birthdate" id="birthdate" max="1984-12-31" required><br>
 
             <label for="hero">Hero name:</label>
             <input type="text" name="hero" id="hero" required><br>
@@ -34,19 +34,19 @@
             <input type="checkbox" name="spandex" id="spandex"><br>
 
             <label for="strength">Strength:</label>
-            <input type="range" name="strength" id="" min="1" max="10" value="1"><br>
+            <input type="range" name="strength" id="strength" min="1" max="10" value="1"><br>
 
             <label for="speed">Speed:</label>
-            <input type="range" name="speed" id="" min="1" max="10" value="1"><br>
+            <input type="range" name="speed" id="speed" min="1" max="10" value="1"><br>
 
             <label for="intelligence">Intelligence:</label>
-            <input type="range" name="intelligence" id="" min="1" max="10" value="1"><br>
+            <input type="range" name="intelligence" id="intelligence" min="1" max="10" value="1"><br>
 
             <label for="income">Income:</label>
-            <input type="number" name="income" id="income"><br>
+            <input type="number" name="income" id="income" min="0"><br>
 
             <label for="wealth">Wealth:</label>
-            <input type="number" name="wealth" id="wealth"><br>
+            <input type="number" name="wealth" id="wealth" min="0"><br>
 
             <label for="tax">Tax:</label>
             <input type="number" name="tax" id="tax" disabled>
@@ -55,18 +55,18 @@
             </div>
         </fieldset>
     </form>
-</body>
 <script>
-var income = document.getElementById("income");
-var wealth = document.getElementById("wealth");
-var tax = document.getElementById("tax");
+    var income = document.getElementById("income");
+    var wealth = document.getElementById("wealth");
+    var tax = document.getElementById("tax");
 
-income.addEventListener("input", updateTax);
-wealth.addEventListener("input", updateTax);
+    income.addEventListener("input", updateTax);
+    wealth.addEventListener("input", updateTax);
 
-function updateTax() {
-    tax.value = (income.value * 0.35) + (wealth.value * 0.25);
-}
+    function updateTax() {
+        tax.value = (income.value * 0.35) + (wealth.value * 0.25);
+    }
 
 </script>
+</body>
 </html>
